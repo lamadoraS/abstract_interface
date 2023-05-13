@@ -2,20 +2,25 @@
 
 abstract class open 
 {
+   public $name;
    public $conn;
    public $servername ="localhost";
    public $username="root";
    public $password="";
    public $dbname="abstract";
 
-   public function __construct()
+   public function __construct($name)
    {
+      $this->name = $name;
     $this->conn= new mysqli($this->servername,$this->username,$this->password);
     $db= ("CREATE DATABASE IF NOT EXISTS $this->dbname");
     $this->conn->query($db);
-    $agashauj
+     
+    
     
    }
+   abstract public function intro(): string
+
 
    
 }
