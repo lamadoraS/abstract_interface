@@ -13,6 +13,7 @@ abstract class open
     $this->conn= new mysqli($this->servername,$this->username,$this->password);
     $db= ("CREATE DATABASE IF NOT EXISTS $this->dbname");
     $this->conn->query($db);
+    $agashauj
     
    }
 
